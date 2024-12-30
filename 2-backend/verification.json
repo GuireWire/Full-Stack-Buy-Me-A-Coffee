@@ -1,0 +1,8 @@
+{
+    "contract": "buy_me_a_coffee.vy",
+    "compilerVersion": "0.4.0",
+    "constructorArguments": "0x000000000000000000000000feeff7c3fb57d18c5c6cdd71e45d2d0b4f9377bf000000000000000000000000894423c43cd7230cd22a47b329e96097e635529200000000000000000000000023a1afd896c8c8876af46adc38521f4432658d1e",
+    "optimization": true,
+    "contractAddress": "0x61B68e7E30c920879d2B7258FC6e7Cdc8de230e3",
+    "network": "testnet"
+}

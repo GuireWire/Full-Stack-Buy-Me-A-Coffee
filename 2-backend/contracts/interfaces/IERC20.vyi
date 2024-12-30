@@ -1,0 +1,29 @@
+# @title Interface for ERC20 token standard
+# @dev Interface defined as per EIP-20
+
+@external
+@view
+def totalSupply() -> uint256:
+    ...
+
+@external
+@view
+def balanceOf(account: address) -> uint256:
+    ...
+
+@external
+def transfer(to: address, amount: uint256) -> bool:
+    ...
+
+@external
+@view
+def allowance(owner: address, spender: address) -> uint256:
+    ...
+
+@external
+def approve(spender: address, amount: uint256) -> bool:
+    ...
+
+@external
+def transferFrom(from_: address, to: address, amount: uint256) -> bool:
+    ...

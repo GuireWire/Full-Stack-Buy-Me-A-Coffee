@@ -1,0 +1,42 @@
+[project]
+src = "contracts"
+out = "out"
+dot_env = ".env"
+
+# This is called Top Level Named Contracts
+[networks.contracts.price_feed]
+deployer_script = "script/deploy_mocks.py"
+abi = "mock_v3_aggregator"
+
+[networks.contracts.coffee]
+deployer_script = "script/deploy-sepolia.py"
+
+[networks.anvil]
+url = "http://127.0.0.1:8545"
+default_account_name = "Anvil1"
+save_to_db = true
+
+[networks.sepolia]
+url = "$SEPOLIA_RPC_URL"
+chain_id = 11155111
+save_to_db = false
+default_account_name = "Sepolia1"
+explorer_uri = "https://eth-sepolia.blockscout.com"
+explorer_type = "blockscout"
+
+[networks.sepolia-zksync]
+url = "$SEPOLIA_ZKSYNC_RPC_URL"
+chain_id = 300
+save_to_db = false
+default_account_name = "Sepolia1"
+explorer_uri = "https://explorer.sepolia.era.zksync.dev/"
+explorer_type = "zksyncexplorer"
+is_zksync = true
+
+[networks.sepolia-zksync.contracts]
+eth_price_feed = { address = "0xfEefF7c3fB57d18C5C6Cdd71e45D2D0b4F9377bF", is_dependency = true }
+link_price_feed = { address = "0x894423C43cD7230Cd22a47B329E96097e6355292", is_dependency = true }
+link_token = { address = "0x23A1aFD896c8c8876AF46aDc38521f4432658d1e", is_dependency = true }
+
+
+# You can view all configuration options at https://cyfrin.github.io/moccasin/all_moccasin_toml_parameters.html
